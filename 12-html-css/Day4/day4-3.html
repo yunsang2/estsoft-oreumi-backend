@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>과제 2</title>
+        <link rel="stylesheet" href="..//reset.css">
+        
+        <style>
+           #container{
+                border: 2px solid #333;
+                margin: 100px auto;
+                width: 640px;
+                padding: 20px;
+
+                
+                font-weight: bold;
+                text-align: center;
+                line-height: 200px;
+
+                display: flex;
+                gap: 20px;
+           }
+
+           #container>div{
+                width: 200px;
+                
+            }
+
+            #container>div:nth-child(1){background-color: pink;}
+            #container>div:nth-child(2){background-color: yellowgreen;}
+            #container>div:nth-child(3){background-color: gold;}
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div>Pink</div>
+            <div>Yellowgreen</div>
+            <div>Gold</div>
+        </div>
+    </body>
+</html>
