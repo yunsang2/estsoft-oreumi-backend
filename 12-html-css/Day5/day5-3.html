@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+
+        #content {
+            padding: 100px;
+        }
+
+        #content > h1 {
+            font-weight: bold;
+            font-size: 50px;
+            
+            text-align: center;
+        }
+
+        #content > p {
+
+            margin: 30px auto 0;
+            width: 500px;
+            margin-top: 30px;
+            line-height: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* 뷰포트 전체를 덮는 반투명 레이어 */
+        #backbord {
+            position: fixed; /* 화면에 고정 */
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+
+            display: flex; /* box를 중앙에 놓기 위해 flex 사용 */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        /* 중앙 박스 */
+        #box {
+            width: 300px;
+            background-color: #fff;
+            border: 2px solid #fafafa7a;
+            box-sizing: border-box;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        #box > div:nth-child(1) { 
+            border-bottom: 1px solid #fafafa7a;
+            background-color: gray;
+            line-height: 50px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #box > div:nth-child(2) { 
+            padding: 20px;
+            line-height: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Lorem Ipsum</h1>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Integer eleifend luctus magna, ac tempus augue varius sit amet.
+            Nullam dapibus condimentum urna, non cursus velit efficitur id.
+            Quisque sed hendrerit nunc, vitae laoreet metus. Integer commodo
+            mi nec sodales mollis. Nam blandit in odio dapibus malesuada. 
+            Fusce ullamcorper leo et quam molestie. vitae fermentum nibh porta. 
+            Mauris aliquam nec ex rhoncus porta. Pellentesque habitant morbi
+            tristique senectus et netus et malesuada fames ac turpis egestas.
+            Phasellus euismod et eros nec pellentesque. Curabitur ut dictum
+            libero. Vestibulum pretium eu nulla vel consequat. Nullam eget leo
+            nec metus vestibulum malesuada. Nunc a laoreet nibh. Praesent dictum,
+            risus et euismod accumsan. est erat tincidunt purus, eu fringilla 
+            justo dolor quis sem.
+        </p>
+    </div><!-- /#content -->
+
+    <div id="backbord">
+        <div id="box">
+            <div>Alert!</div>
+    
+            <div>
+                이것은 메시지 창입니다.<br>
+                오버레이 레이어 위에 올라와있습니다.
+                그래서 오버레이 레이어와 함께 나타났다 사라집니다.
+            </div>
+        </div><!-- /#box -->
+    </div><!-- /#backbord -->
+</body>
+</html>
