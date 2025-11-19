@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>과제 1</title>
+        <style>
+            #container{
+                /* 큰 박스 */
+                border: 2px solid #333;
+                margin: 100px auto;
+                width: 420px;
+                padding: 20px;
+                /* 박스들 text 속성 */
+                color: black;
+                font-weight: bold;
+                text-align: center;
+                /* 높이 (100 + 100 + 20) */
+                line-height: 220px;
+                display: flex;
+                gap: 20px;
+
+            }
+
+            #container > div{
+                width: 200px;
+
+            }
+            
+            #container > div > div{
+                line-height: 100px;
+            }
+
+            #container > div > div:nth-child(1){
+                margin-bottom: 20px;
+            }
+
+
+            #container > div > div:nth-child(1){background-color: Pink;}
+            #container > div > div:nth-child(2){background-color: Yellowgreen;}
+            #container > div:nth-child(2){background-color: Gold;}
+           
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <!-- 큰 박스가 2개 있다고 생각하고 div를 사용  -->
+            <div>
+                <div>Pink</div>
+                <div>Yellowgreen</div>
+            </div>
+
+            <div>Gold</div>
+        </div><!-- /#container -->
+    </body>
+</html>
