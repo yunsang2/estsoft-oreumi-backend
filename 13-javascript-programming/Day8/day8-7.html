@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>과제 1</title>
+</head>
+<body>
+    <script>
+        
+        const prt = [
+            'Time is gold',
+            'No sweat, no sweet',
+            'Asking costs nothing',
+            'Step by step goes a long way',
+            'You will never know until you try'
+        ];
+
+        var i = 0;
+        
+        var timer = window.setInterval(function (){
+                console.log(`${i + 1}. ${prt[i]}.`);
+                
+                if(i!=4) {i++;}
+                else {window.clearInterval(timer);}
+            }
+            ,2000);
+        
+        
+    </script>
+    
+</body>
+</html>
