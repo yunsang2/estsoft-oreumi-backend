@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>과제 2</title>
+</head>
+<body>
+    <script>
+        
+        const color = ['red', 'green', 'blue'];
+        
+        var i = 0;
+        window.setInterval(function (){
+            console.log(`background-color: ${color[i]};`);
+            
+
+            if (i != 2) {i++;}
+            else {i = 0;}
+        }
+        ,2000);
+        
+        
+    </script>
+    
+</body>
+</html>
