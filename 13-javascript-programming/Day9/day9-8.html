@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>과제 1</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        #newsTicker {
+            width: 350px;
+            height: 2.5em;
+            border: 5px solid #1cc547;
+
+            overflow: hidden;
+            box-sizing: border-box;
+            margin: 100px auto;
+        }
+
+        #newsTicker > ul > li {
+            line-height: 2em;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="newsTicker">
+    <ul>
+        <li>1. Time is gold.</li>
+        <li>2. No sweat, no sweet.</li>
+        <li>3. Asking costs nothing.</li>
+        <li>4. Step by step goes a long way.</li>
+        <li>5. You will never know until you try.</li>
+    </ul>
+</div>
+
+<script>
+    const list = document.querySelector('#newsTicker > ul');
+
+    let i = 1;
+
+    window.setInterval(function() {
+
+        list.style.marginTop = `-${i * 2}em`;
+        
+        i++;
+
+        if (i === 5) i = 0;
+    }, 2000);
+</script>
+
+</body>
+</html>
+
