@@ -10,22 +10,21 @@ public class Day10_5 {
 
             int count = 0;
 
+            temp[count++] = arr[0];
 
             for (int i = 1; i < arr.length; i++) {
                 if (arr[i] != arr[i - 1]) {
-                    temp[(count+1)] = arr[i];
+                    temp[count++] = arr[i];
                 }
             }
-
 
             int[] answer = new int[count];
             for (int i = 0; i < count; i++) {
                 answer[i] = temp[i];
             }
-
             return answer;
         }
     }
-
+    
 }
 
