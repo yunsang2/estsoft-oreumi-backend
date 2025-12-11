@@ -34,36 +34,30 @@ public class Day10_1 {
 
     public static int getNthNumber(int n) {
 
-        List<Integer> list = new ArrayList<>();
         // 0번째가 1번째 숫자
         int count = 0;
+        final String strBase = "666";
+        String str = "666";
+        int i = 0, j = 0;
 
-        while (list.size() < n) {
-
-            for (int i = 0;i >= 0; i++) {
-
-                String Str;
-
-                if (i == 0) Str = "666";
-                else if (i % 5 != 0){
-                    // 문자열 조합으로 숫자 생성
-                    Str = i + "666";
+        do {
+//          변수 i의 1의 자리 숫자가 6이 아니면, 변수 i를 "666" 앞에 붙인다
+            if (i % 10 != 6) {
+                count++;
+            } else {
+//              변수i가 6이면, 뒤에 j 를 붙이고 count 가 n 보다 작으면 빠져나온다
+                for (j = 0; j <10 && count < n; j++) {
+                    str = (i / 10) + strBase + j;
+                    count++;
                 }
-                else {
-                    Str = count + "666" + i;
-                }
-
-                int number = Integer.parseInt(Str);
-                list.add(number);
-
-                if (list.size() >= n) break;
             }
-            count++;
-        }
 
-        Collections.sort(list);
+            i++;
+
+        } while (count != n);
+
         // 0번째 부터 시작해 -1 을 해줘야 함
-        return list.get(n - 1);
+            return Integer.parseInt(str);
     }
 
 
