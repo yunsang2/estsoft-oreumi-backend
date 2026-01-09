@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box"></div>
+
+    <script>
+
+        const box = document.getElementById('box')
+
+        
+        
+        var i = 1;
+        
+        const timer = window.setInterval(function () {
+            
+            box.style.marginLeft = `${(i * 200)}px`;
+
+            
+            i++;
+            
+            if ( i === 4) window.clearInterval(timer);
+        
+        },2000);
+
+
+        
+    </script>
+</body>
+</html>

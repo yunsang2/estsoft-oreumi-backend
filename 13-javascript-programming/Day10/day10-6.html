@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>입력값 출력 예제</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    /* 화면 디자인은 예시입니다 (이미지 스타일 유사하게 어둡게) */
+    body {
+      background: #2b2b2b;
+      color: #eee;
+      font-family: "Noto Sans KR", sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .card {
+      background: #333;
+      padding: 20px;
+      width: 360px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+      border-radius: 6px;
+    }
+
+    .field {
+      margin-bottom: 12px;
+    }
+
+    label {
+      display: inline-block;
+      width: 60px;
+    }
+
+    input[type="text"] {
+      width: calc(100% - 70px);
+      padding: 6px 8px;
+      border-radius: 3px;
+      border: 1px solid #bbb;
+      background: #fff;
+      color: #000;
+    }
+
+    .radios {
+      display: inline-block;
+      margin-left: 6px;
+    }
+
+    select {
+      padding: 6px 8px;
+      border-radius: 3px;
+      border: 1px solid #bbb;
+      background: #fff;
+      color: #000;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      margin-top: 8px;
+      padding: 10px 0;
+      border-radius: 3px;
+      border: none;
+      background: #ddd;
+      color: #000;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    /* 결과 영역 */
+    #result {
+      margin-top: 18px;
+      color: #ddd;
+      line-height: 1.6;
+    }
+    #result p { margin: 6px 0; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>입력 예제</h2>
+
+    <div class="field">
+      <label for="name">이름:</label>
+      <input id="name" type="text" placeholder="이름을 입력하세요" />
+    </div>
+
+    <div class="field">
+      <label>성별:</label>
+      <span class="radios">
+        <label><input type="radio" name="gender" value="남자" /> 남자</label>
+        <label style="margin-left:10px;"><input type="radio" name="gender" value="여자" /> 여자</label>
+      </span>
+    </div>
+
+    <div class="field">
+      <label for="age">연령대:</label>
+      <select id="age">
+        <option value="10대">10대</option>
+        <option value="20대">20대</option>
+        <option value="30대">30대</option>
+        <option value="40대">40대</option>
+        <option value="50대">50대</option>
+      </select>
+    </div>
+
+    <button id="confirmBtn" type="button">확인</button>
+
+    <div id="result" aria-live="polite"></div>
+  </div>
+
+  <script>
+    // DOM 요소 취득
+    const nameInput = document.getElementById('name');
+    const ageSelect = document.getElementById('age');
+    const confirmBtn = document.getElementById('confirmBtn');
+    const resultDiv = document.getElementById('result');
+
+    // 라디오에서 선택된 성별 가져오기
+    function getSelectedGender() {
+      const radios = document.querySelectorAll('input[name="gender"]');
+      for (const r of radios) {
+        if (r.checked) return r.value;
+      }
+      return null;
+    }
+
+    confirmBtn.addEventListener('click', function () {
+      const name = nameInput.value.trim();
+      const gender = getSelectedGender();
+      const age = ageSelect.value; // ex: "30대"
+
+      // 간단한 검증
+      if (!name) {
+        alert('이름을 입력하세요.');
+        nameInput.focus();
+        return;
+      }
+      if (!gender) {
+        alert('성별을 선택하세요.');
+        return;
+      }
+
+      // 출력 텍스트 구성
+      const line1 = `반갑습니다, ${name} 님.`;
+      // 예시: "홍길동 님은 30대 남자입니다."
+      const line2 = `${name} 님은 ${age} ${gender}입니다.`;
+
+      // HTML에 출력 (줄바꿈을 위해 p 태그 사용)
+      resultDiv.innerHTML = `<p>${line1}</p><p>${line2}</p>`;
+    });
+  </script>
+</body>
+</html>

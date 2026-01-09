@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    <h1 id="best">DO YOUR BEST!</h1>
+
+    <script>
+
+        const best = document.getElementById('best')
+
+        const color = ['red', 'blue', 'green'];
+        
+        var i = 0;
+        
+        window.setInterval(function (){
+            
+            best.style.color = color[i];
+
+            i = (i + 1) % color.length;
+            
+        }, 2000);
+
+
+        
+    </script>
+</body>
+</html>

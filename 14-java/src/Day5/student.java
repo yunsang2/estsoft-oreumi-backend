@@ -1,18 +1,18 @@
-package Day5;
+package day5;
 
-class student {
+public class Student {
 
-    private String name;
-    private int kor;
-    private int math;
-    private int eng;
+    private String name = null;
+    private int kor = 0;
+    private int math = 0;
+    private int eng = 0;
 
-    private double average;
-    private char grade;
+    private double average = 0;
+    private char grade = ' ';
 
-    public student(){}
+    public Student(){}
 
-    public student(String name, int kor, int math, int eng) {
+    public Student(String name, int kor, int math, int eng) {
         this.name = name;
 
         if (kor >= 0 && kor <= 100)

@@ -1,6 +1,9 @@
 package day10;
 
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class Day10_5 {
 
     public class Solution {
@@ -25,6 +28,17 @@ public class Day10_5 {
             return answer;
         }
     }
-    
+    static int[] solution2(int[] arr) {
+        Deque<Integer> stack = new ArrayDeque<>();
+
+        stack.push(arr[0]);
+
+        for (int item : arr) {
+            if (!stack.getLast().equals(item)) {
+
+            }
+        }
+    }
+
 }
 

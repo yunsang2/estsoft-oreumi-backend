@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>과제 1</title>
+</head>
+<body>
+    <script>
+        
+        const prt = [
+            'Time is gold',
+            'No sweat, no sweet',
+            'Asking costs nothing',
+            'Step by step goes a long way',
+            'You will never know until you try'
+        ];
+
+        for (let i = 0; i < 5; i++) {
+            setTimeout(function() {
+                console.log(`${i + 1}. ${prt[i]}.`);
+            }, 2000 * i);
+        }
+        
+        
+    </script>
+    
+</body>
+</html>

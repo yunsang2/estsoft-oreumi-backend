@@ -20,8 +20,12 @@
         var timer = window.setInterval(function (){
                 console.log(`${i + 1}. ${prt[i]}.`);
                 
-                if(i!=4) {i++;}
-                else {window.clearInterval(timer);}
+                if(i!=4) {
+                    i++;
+                }
+                else {
+                    window.clearInterval(timer);
+                }
             }
             ,2000);
         

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Input Form</h2>
+
+    <!-- <form> 요소: 입력 양식을 표현 -->
+    <!-- action 속성: 입력 양식에 사용자가 입력한 데이터를 전송할 URL을 지정 -->
+    <!-- method 속성: 사용자가 입력한 데이터를 전송할 방식을 지정 -->
+    <form action="/server/progrem" method="post">
+        <p>
+            <!-- <input> 요소: -->
+            <!-- type 속성: 입력요소의 형태를 지정 -->
+            <!-- name 속성: 사용자가 입력한 데이터를 구분하기 위한 이름을 지정 -->
+            <!-- type="text": 한 줄짜리 입력 창을 표현 -->
+            <!-- placeholder 속성: 연한 글씨로 텍스트를 표현 -->
+            TEXT: <input type="text" name="username" placeholder="Your username">
+        </p>
+        <p>
+            <!-- type="password": 비밀번호 입력 창을 표현 -->
+            PASSWORD: <input type="password" name="password">
+        </p>
+        <p>
+            <!-- type="radio": 같은 name 속성을 가지고 있는 라디오 버튼 가운데 
+            하나를 선택할 수 있는 라디오 버튼을 표현 -->
+            <!-- value 속성: radio 버튼이나 checkbox 버튼에서 전달할 값을 지정 -->
+            <!-- <label> 요소: 입력 요소의 안내 문구를 표현 -->
+                RADIO: 
+                <label>
+                    <input type="radio" name="favorite" value="milk">우유
+                </label>
+                <label>
+                    <input type="radio" name="favorite" value="cocoa">코코아
+                </label>
+                <label>
+                    <input type="radio" name="favorite" value="juice">주스
+                </label>
+                
+        </p>
+        <p>
+            <!-- type="checkbox": 체크할 수 있는 checkbox 버튼을 표현 -->
+            CHECKBOX: 
+            <label>
+                <input type="checkbox" name="agree" value="yes">
+            </label>
+        </p>
+        <p>
+            <!-- type="reset": 초기화 버튼을 표현 -->
+            <!-- value 는 여기서 버튼의 택스트 변경 -->
+            RESET: <input type="reset" name="reset" value="삭제">
+        </p>
+        <p>
+            <!-- type="submit": 지정한 URL주소에 전달하는 버튼을 표현 -->
+            SUBMIT: <input type="submit" name="login" value="로그인">
+        </p>
+        <p>
+            <!-- <select> 요소: 선택 입력 요소를 표현 -->
+            SELECT: 
+            <select name="tour">
+                <!-- <option> 요소: <select> 요소에 포함되는 선택 항목을 표현 -->
+                <option value="korea">한국</option>
+                <option value="america">미국</option>
+                <option value="japan">일본</option>
+                <option value="china">중국</option>
+            </select>
+        </p>
+        <p>
+            <!-- <textarea> 요소: 입력 글 상자를 표현 -->
+            TEXTAREA: <textarea name="comment" cols="30" rows="5"></textarea>
+        </p>
+        
+    </form>
+
+    <hr>
+
+    <p>
+        <!-- HTML 엔티티 -->
+        <!-- 꺽은 가로 <> 를 표현하는 방법 -->
+        나는 &lt;악기 연주&gt;를 좋아합니다!
+    </p>
+</body>
+</html>

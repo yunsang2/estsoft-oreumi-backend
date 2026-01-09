@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        #work {
+            width: 300px;
+            line-height: 100px;
+            font-size: 2em;
+            text-align: center;
+            background-color: aqua;
+            border-radius: 50px;
+            margin: 100px 100px;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function () {
+            
+            const work = document.getElementById('work');
+
+            let i = 1;
+
+            document.getElementById('move').addEventListener('click', function () {
+                
+                work.style.transform = `translateX(${i++ * 200}px)`;
+
+            });
+            
+            document.getElementById('reset').addEventListener('click', function () {
+                work.style.transform = 'translateX(0)';
+                i = 1;
+            });
+        });
+
+            
+        
+            
+        
+
+    </script>
+</head>
+<body>
+    <h1 id="work">WORK HARD!</h1>
+
+    <p>
+        <button type="button" id="move">MOVE!</button>
+        <button type="button" id="reset">RESET!</button>
+    </p>
+
+</body>
+</html>

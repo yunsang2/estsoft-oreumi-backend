@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Unordered list</title>
+    </head>
+
+    <body>
+
+        <h2>Unordered List</h2>
+
+        <!-- <ul> 요소 : 순서가 없는 목록을 표현 -->
+        <ul>
+            <!-- 목록의 항목 -->
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Cherry</li>
+        </ul>
+
+        <hr>
+
+        <h2>Ordered List</h2>
+
+        <!-- <ol> 요소 : 순서가 있는 목록을 표현 -->
+        <ol>
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagrm</li>
+        </ol>
+
+        <hr>
+
+        <h2>Overlapped List</h2>
+        <!-- 중첩된 목록 -->
+        <ul>
+            <li>
+                HTML
+                <!-- 안쪽 목록은 바깥쪽 목록의 항목에 포함되는 목록이다. -->
+                <ul>
+                    <li>HTML Tags</li>
+                    <li>HTML Elements</li>
+                    <li>Structure and contents</li>
+                </ul>
+            </li>
+
+            <li>
+                CSS
+
+                <ol>
+                    <li>Style sheets</li>
+                    <li>CSS blocks</li>
+                </ol>
+            </li>
+
+            <li>JavaScript</li>
+        </ul>
+
+        <hr>
+
+        <h2>Definition list</h2>
+
+        <!-- <dl> 요소: 정의 목록울 표현 -->
+        <dl>
+            <!-- <dt> 요소: 정의 용어(표제어)를 표현-->
+            <dt>HTML</dt>
+            <!-- <dd> 요소: 정의 설명을 표현 -->
+            <dd>HTML에 대한 설명....끝</dd>
+            <dd>HTMl을 활용해서 만들만한것....끝</dd>
+            <dd>마무리</dd>
+
+        </dl>
+
+        <hr>
+
+        <h2>Table</h2>
+
+        <!-- <table> 요소: 표를 표현 -->
+        <!-- border 요소는 사용해선 안된다 -->
+        <table border="1">
+            <!-- <thead> 요소: 제목 행들의 묶음(생략 가능) -->
+            <thead>
+                <!-- <tr> 요소: 표의 행을 표현 -->
+                <tr>
+                    <!-- <th> 요소: 표의 제목 셀을 표현 -->
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                    <th>Header 4</th>
+                </tr>
+            </thead>
+
+            <!-- <tbody> 요소: 본문 행들의 묶음(생략 불가) -->
+            <tbody>
+                <tr>
+                    <!-- <td> 요소: 표의 본문 셀을 표현 -->
+                    <td>Data row 1 column 1</td>
+                    <td>Data row 1 column 2</td>
+                    <td>Data row 1 column 3</td>
+                    <td>Data row 1 column 4</td>
+                </tr>
+                <tr>
+                    <td>Data row 2 column 1</td>
+                    <td>Data row 2 column 2</td>
+                    <td>Data row 2 column 3</td>
+                    <td>Data row 2 column 4</td>
+                </tr>
+                <tr>
+                    <td>Data row 3 column 1</td>
+                    <td>Data row 3 column 2</td>
+                    <td>Data row 3 column 3</td>
+                    <td>Data row 3 column 4</td>
+                </tr>
+            </tbody>
+            <!-- <tfoot> 요소: 푸터 행들의 묶음(생략 가능) -->
+            <tfoot></tfoot>
+        </table>
+
+
+    </body>
+</html>

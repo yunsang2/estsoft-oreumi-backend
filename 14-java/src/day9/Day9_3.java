@@ -22,6 +22,7 @@ public class Day9_3 {
         System.out.printf("The least common multiple of %d and %d = %d\n", max, min, getLcm(min, max));
 
     }
+
     /**
      * n1 과 n2 를 가지고 최대 공약수, 최소 공배수 구하기
      * @param 유클리드 알고리즘을 통해 n1, n2의 최대 공약수 구하기
@@ -34,10 +35,7 @@ public class Day9_3 {
         return b == 0 ? a : getGcd(b, a % b);
     }
 
-    static int getLcm(int a, int b) {
-        return(a * b) / getGcd(a, b);
+    static long getLcm(int a, int b) {
+        return ((long) a * b) / getGcd(a, b);
     }
-
-
-
 }

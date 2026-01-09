@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <script>
+        
+        var ko = 88;
+        var en = 72;
+        var ma = 92;
+
+        var grade = 'F'
+        var average = (ko+en+ma)/3
+
+        if (average >= 90) {grade = 'A';}
+        else if (average >= 80) {grade = 'B'}
+        else if (average >= 70) {grade = 'C';}
+        else if (average >= 60) {grade = 'D';}
+
+        console.log(`Average: ${average}`);
+        console.log(`Grade: ${grade}`);
+        
+
+    </script>
+</body>
+</html>

@@ -40,16 +40,19 @@ public class Day7_1 {
 
             catch (NegativeScoreException e) {
                 System.out.println("ERROR: Negative scores are not valid.");
+                System.out.println("Try again.");
                 System.out.println();
             }
 
             catch (InvalidScoreException e) {
                 System.out.println("ERROR: Invalid score.");
+                System.out.println("Try again.");
                 System.out.println();
             }
 
             catch (Exception e) {
                 System.out.println("ERROR: Invalid input.");
+                System.out.println("Try again.");
                 System.out.println();
                 sc.nextLine();
             }

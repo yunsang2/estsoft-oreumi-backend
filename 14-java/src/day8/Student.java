@@ -11,8 +11,7 @@ public class Student {
         this.name = name;
     }
     public Student() {
-        this.id = 0;
-        this.name = null;
+        this(0, null);
     }
 
     public int getId() {return id;}

@@ -1,11 +1,11 @@
-package Day5;
+package day5;
 
 public class Day5_7 {
     public static void main(String[] args) {
 
-    student kim = new student("Cheolsu Kim", 88, 76, 64);
-    student pack = new student("Yeonghee Pack", 92, 88, 94);
-    student hong = new student("Gildong Hong", 96, 64, 48);
+    Student kim = new Student("Cheolsu Kim", 88, 76, 64);
+    Student pack = new Student("Yeonghee Pack", 92, 88, 94);
+    Student hong = new Student("Gildong Hong", 96, 64, 48);
 
 
     kim.print();

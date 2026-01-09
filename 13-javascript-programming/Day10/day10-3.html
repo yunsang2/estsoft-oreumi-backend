@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="http://www.google.com">Google</a></li>
+        <li><a href="http://www.naver.com">Naver</a></li>
+        <li><a href="http://www.daum.net">Daum</a></li>
+        <li><a href="http://www.facebook.com">Facebook</a></li>
+        <li><a href="http://www.twitter.com">Twitter</a></li>
+    </ul>
+
+
+    <script>
+
+        for (const link of document.links){
+            link.addEventListener('click', function(event) {
+
+                event.preventDefault();
+
+                window.alert(this.href);
+                
+            });
+        }
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        #best {
+            margin: 100px auto;
+            font-size: 2em;
+            width: 300px;
+            line-height: 2em;
+            text-align: center;
+            background-color: #83c99a;
+            border-radius: 150px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 id="best">DO YOUR BEST!</h1>
+
+    <script>
+
+        const best = document.getElementById('best');
+
+        best.addEventListener('click', function() {
+            // 애니메이션 1초에 걸쳐
+            this.style.transitionDuration = '1s';
+            // 투명도
+            this.style.opacity = '0';
+            
+            // 해당 요소 숨김(선택이 안되도록)
+            this.style.visibility = 'hidden';
+
+            
+            // display 를 사용할꺼면
+            const that = this;
+
+            // 해당 애니메이션이 끝나고
+            window.setTimeout(function() {
+                that.style.display = 'none';
+            }, duration)
+        })
+    </script>
+</body>
+</html>

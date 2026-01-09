@@ -1,6 +1,4 @@
-package Day1;
-
-import java.io.PrintStream;
+package day1;
 
 public class Day1_3 {
     public static void main(String[] args) {

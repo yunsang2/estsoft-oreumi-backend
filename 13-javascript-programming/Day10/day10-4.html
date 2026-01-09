@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+    </style>
+</head>
+<body>
+    <h1 id="step">Step by step goes a long way.</h1>
+
+    <p>
+        <button type="button" id="toggle">TOGGLE</button>
+    </p>
+
+    <script>
+        const step = document.getElementById('step');
+
+        document.getElementById('toggle').addEventListener('click', function () {
+            
+            if (this.innerHTML !== 'RESET'){
+                step.style.color = 'red';
+                this.innerHTML = 'RESET';
+            }
+            else{
+                step.removeAttribute('style');
+                this.innerHTML = 'TOGGLE';
+            }
+        });
+        
+        
+
+    </script>
+</body>
+</html>
