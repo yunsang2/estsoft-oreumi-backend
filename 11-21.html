@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML/CSS_Example</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css"
+        />
+        <style>
+           #container{
+                width: 1080px;
+                margin: 0 auto;
+           }
+
+           #header > h1 {
+                padding: 20px 20px;
+                font-size: 2.4em;
+                font-weight: 900;
+                text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+           }
+
+           #nav{
+                background-color: gray;
+                box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+                margin-bottom: 5px;
+
+                
+
+                /* 메뷰 바를 나란히 배치하기 위해 컨테이너로 설정 */
+                display: flex;
+
+                /* 양쪽에 배치 */
+                justify-content: space-between;
+           }
+
+           #nav > ul {
+                display: flex;
+
+           }
+
+
+           #nav > ul > li > a {
+                display: block;
+                padding: 1em 2em;
+
+                
+                text-decoration: none;
+                color: white;
+
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+           }
+
+           #nav > ul > li > a:hover{background-color: black;}
+
+           #wrap{
+                display: flex;
+           }
+
+           #sidebar {
+                width: 200px;
+                padding-top: 1em;
+           }
+
+           #sidebar > ul > li > a {
+                display: block;
+                padding: 0.4em 1em;
+
+                text-decoration: none;
+                color: black;
+           }
+
+           #sidebar > ul > li > a:hover{
+                background-color: #ccc;
+           }
+
+           #content { 
+                width: 880px;
+                padding:  2em;
+                box-sizing: border-box;
+
+                border-left: 1px solid #aaa;
+           }
+
+           #content > h2 { 
+                font-size:  1.6em;
+                font-weight: bold;
+                margin-bottom: 0.8em;
+           }
+
+           #content > p {
+                line-height: 1.5;
+                margin-top: 1em;
+           }
+
+           #footer { 
+                border-top: 1px solid #aaa;
+                padding: 3em;
+                text-align: right;
+                font-size: smaller;
+           }
+
+
+
+        </style>
+    </head>
+    <body>
+        
+        <div id="container">
+
+            <header id="header">
+                <h1>One-True Layout</h1>
+            </header><!-- /#header -->
+
+            <nav id="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#html">HTML</a></li>
+                    <li><a href="#css">CSS</a></li>
+                    <li><a href="#javascript">JavaScript</a></li>
+                    <li><a href="#jquery">jQuery</a></li>  
+                </ul>
+
+                <ul>
+                    <li><a href="#login">Log in</a></li>
+                    <li><a href="#signup">Sign up</a></li>
+                </ul>
+            </nav><!-- /#nav -->
+
+            <div id="wrap">
+
+                <aside id="sidebar">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#html">HTML</a></li>
+                        <li><a href="#css">CSS</a></li>
+                        <li><a href="#javascript">JavaScript</a></li>
+                        <li><a href="#jquery">jQuery</a></li> 
+                    </ul>
+                </aside><!-- /#sidebar -->
+
+                <main id="content">
+                    <h2>Lorem Ipsum</h2>
+
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+                        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', 
+                        making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, 
+                        and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, 
+                        sometimes on purpose (injected humour and the like).
+                    </p>
+
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, 
+                        or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, 
+                        you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, 
+                        making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. 
+                        The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                    </p>
+
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, 
+                        making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, 
+                        consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. 
+                        Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. 
+                        This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                    </p>
+                </main><!-- /#content -->
+            </div><!-- /#wrap -->
+
+            <footer id="footer">
+                &copy; 2016-2024 Cheonha University.
+            </footer><!-- /#footer -->
+
+        </div><!-- /#container -->
+    </body>
+</html>
